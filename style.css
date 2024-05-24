@@ -1,0 +1,223 @@
+:root {
+  --clr-primary-700: hsl(245, 75%, 52%);
+  --clr-primary-200: hsl(225, 100%, 94%);
+  --clr-primary-300: hsl(245, 83%, 68%, 1);
+
+  --clr-neutral-400: hsl(223, 47%, 23%);
+  --clr-neutral-300: hsl(224, 23%, 55%);
+  --clr-neutral-200: hsl(225, 100%, 98%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
+
+  --fw--regular: 500;
+  --fw--bold: 700;
+  --fw--bolder: 900;
+
+  --ff--base: "Red Hat Display", sans-serif;
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font-family: inherit;
+  font-size: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+}
+h1,
+h2,
+h3 {
+  line-height: 1.1;
+}
+/*
+  9. button reset list styles
+
+*/
+
+
+
+/* For Styling */
+body {
+  padding: 1rem;
+  background-color: var(--clr-primary-200);
+  font-weight: var(--fw--bold);
+  font-family: var(--ff--base);
+  line-height: 1.6;
+  /* Background Image */
+
+  background-image: url("/images/pattern-background-mobile.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* For centering the card */
+
+  display: grid;
+  place-content: center;
+}
+
+/* Card Styling */
+.card {
+  border-radius: 1rem;
+  background-color: var(--clr-neutral-100);
+  border-radius: 1.395rem;
+  overflow: hidden;
+  max-width: 28.2rem;
+  
+}
+.card__headings {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 1rem;
+}
+.card__content {
+  padding:  3rem 3rem;
+  display: grid;
+  gap: 1rem;
+  margin-top: 0;
+
+}
+.card__description {
+  text-align: center;
+  font-weight: var(--fw--regular);
+  color: var(--clr-neutral-300);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin-top: 0;
+}
+.card__annual-plan-heading{
+  font-weight: var(--fw--bolder);
+  color: var(--clr-neutral-400);
+}
+.card__price-plan{
+  color: var(--clr-neutral-300);
+  font-size: 1rem;
+  font-weight: var(--fw--regular);
+  margin: 1px;
+  
+}
+
+.card__plan {
+  width: 100%;
+  display: flex;
+  background-color: var(--clr-neutral-200);
+  font-size: 0.695rem;
+  gap: 1rem;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+.card__change-plan:hover,
+.card__change-plan:focus {
+  text-decoration: none;
+  color: var(--clr-primary-700);
+  cursor: pointer;
+}
+
+
+.card__change-plan{
+  background:  transparent;
+  border: 0;
+  color: var(--clr-primary-700);
+  text-decoration: underline;
+  font-size: 1rem !important;
+ margin-left: auto;
+ font-weight: var(--fw--bolder);
+
+}
+
+
+.button {
+  background-color: var(--clr-primary-700);
+  text-decoration: none;
+  cursor: pointer;
+  padding:  1em 2em;
+  font-weight: var(--fw--bold);
+  box-shadow: none;
+  border: none;
+  border-radius: .725rem;
+  color: var(--clr-neutral-100);
+  background: transparent;
+}
+.button[data-type="primary"]:hover,
+.button[data-type="primary"]:focus {
+  background-color: var(--clr-primary-300);
+}
+
+.button[data-type="primary"]{
+  background-color: var(--clr-primary-700);
+  color: var(--clr-neutral-100);
+}
+.button[data-type="naked"]{
+  color: var(--clr-neutral-300);
+  padding: 0  ;
+}
+.button[data-type="naked"]:hover,
+.button[data-type="naked"]:focus {
+  color: var(--clr-neutral-400);
+}
+
+
